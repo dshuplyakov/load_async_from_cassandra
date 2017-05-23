@@ -23,7 +23,7 @@ import com.datastax.driver.mapping.annotations.Table;
 
 import java.util.UUID;
 
-@Table(name = "customers")
+@Table(name = "customer")
 public class Customer {
 
 	@PartitionKey(0)
@@ -51,4 +51,13 @@ public class Customer {
 				this.firstName, this.lastName);
 	}
 
+
+	/**mykeyspace.customer
+	 *
+	 CREATE TABLE IF NOT EXISTS customers (
+	 id UUID,
+	 firstName ansi,
+	 lastName ansi
+	 PRIMARY KEY (id);
+	 */
 }

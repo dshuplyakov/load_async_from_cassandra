@@ -13,4 +13,7 @@ import ru.getvoid.entity.Customer;
 public interface CustomerAccessor {
     @Query("select * from customer where firstname = ?")
     ListenableFuture<Result<Customer>> getByFirstname(String uid);
+
+    @Query("select * from customer ALLOW FILTERING")
+    ListenableFuture<Result<Customer>> getAll();
 }

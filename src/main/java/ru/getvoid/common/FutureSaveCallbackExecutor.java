@@ -8,9 +8,6 @@ import ru.getvoid.common.exception.SaveDAOException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Created by Igor.Shalaru on 21.11.2016.
- */
 public class FutureSaveCallbackExecutor<K, V> extends FutureCallbackExecutor {
     private Map<V, K> results;
     private volatile Throwable exception = null;

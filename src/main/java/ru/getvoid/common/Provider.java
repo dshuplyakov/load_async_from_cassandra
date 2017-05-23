@@ -10,9 +10,7 @@ import ru.getvoid.common.exception.SaveDAOException;
 import java.util.Collection;
 import java.util.Collections;
 
-/**
- * Created by Igor.Shalaru on 24.10.2016.
- */
+
 public abstract class Provider<V> {
     private static final Logger log = LoggerFactory.getLogger(Provider.class);
     protected Session session;

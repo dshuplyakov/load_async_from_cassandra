@@ -10,9 +10,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-/**
- * Created by Igor.Shalaru on 26.11.2016.
- */
 public class FutureLoadCallbackExecutor<K> extends FutureCallbackExecutor {
     private Collection<K> collections;
     private volatile Throwable exception = null;

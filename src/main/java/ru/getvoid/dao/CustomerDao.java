@@ -39,6 +39,14 @@ public class CustomerDao {
         return loader.getResults();
     }
 
+    public Collection<Customer> getAll() throws LoadDAOException {
+        FutureLoadCallbackExecutor<Customer> loader = new FutureLoadCallbackExecutor<>(countReadConcurrentAsync);
+        if (!loader.add(accessor.getAll())) {
+            throw new LoadDAOException("Error create for all elements");
+        }
+        return loader.getResults();
+    }
+
 
 
 
